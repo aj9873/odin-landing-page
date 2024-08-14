@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-footer: #1f2937;
+    --awesome: #f9faf8;
+    --button: #3882f6;
+    --quote-section: #e5e7eb;
+
+}
+
+#header-section, #footer {
+    background-color: var(--header-footer);
+}
+button {
+    background-color: #3882f6;
+    border-radius: 5px;
+    border: none;
+}
