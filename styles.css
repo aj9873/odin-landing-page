@@ -136,8 +136,7 @@ button {
 .blue-square-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex: 1
+
 }
 
 #quote-section {
