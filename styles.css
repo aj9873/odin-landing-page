@@ -120,6 +120,7 @@ button {
     max-width: 20ch;
     text-align: center;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 .second-white-section {
     display: flex;
@@ -197,8 +198,8 @@ align-self: flex-end;
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     width: 100%;
     max-width: 1536px;
 }
@@ -249,6 +250,10 @@ align-self: flex-end;
 @media (max-width: 390px) {
     .container {
         max-width: 390px;
-        
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        }
     }
 }
