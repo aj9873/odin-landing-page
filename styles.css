@@ -9,6 +9,7 @@
 }
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
 }
 
 #header-section, #footer {
@@ -16,72 +17,69 @@ body {
 }
 
 #header {
-    display: inline-flex;
+    display: flex;
+    max-width: 100%;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .header-logo {
-    font-size: 24px;
+    font-size: 1rem;
     color: #f9faf8;
     display: flex;
-    width: 100%;
-    flex: 1;
-    margin-left: 100px;
-
+    justify-self: flex-end;
 }
 
-#header ul {
-    font-size: 24px;
+ul > li {
     color: #e5e7eb;
     list-style: none;  
-    border: none;
-    display: inline-flex;
+    display:inline-flex;
     justify-content: flex-end;
-    width: 100%;
-    flex: 2;
-    align-self: center;
-    margin-right: 100px;
+    margin-left: 10%;
 }
-
+ul {
+    display: flex;
+    justify-self: flex-end;
+    margin-left: 50%;
+    width: 100%;
+}
 a {
     text-decoration: none;
     color: #e5e7eb;
-}
-ul > li {
-    color: #e5e7eb;
-    border: none;
-    margin: 0 20px 0 20px;
-    font-size: 18px;
 }
 
 #hero {
     display: flex;
 }
-
 .hero-main {
-    font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    margin-bottom: 10%;
+}
+.heading {
+    font-size: 3rem;
     font-weight: 600;
     color: #f9faf8 ;
-    margin: 200px 50px 100px 200px;
-    flex: 1;
+    margin-top: 100px;
 }
-.hero-main > p {
-    font-size: 36px;
+.subtext {
+    font-size: 2rem;
     font-weight: 500px;
     color: #e5e7eb;
 }
 .img {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    max-width: 300px;
     background-color: gray;
     color: #e5e7eb;
     border: black;
-    margin-right: 200px;
-    margin-left: 50px;
-    flex: 1;
+    margin-left: 3%;
     align-self: center;
     text-align: center;
-    padding: 75px 0 75px 0;
+    padding: 7% 0;
+    flex: 1;
 }
 
 
@@ -91,40 +89,44 @@ button {
     border: none;
     color: white;
     font-weight: 600;
-    padding: 5px 15px 5px 15px;
-    font-size: 15px;
+    padding: 2% 5%;
+    font-size: 1rem;
 }
 
 .blue.square {
     width: 110px;
     height: 110px;
+    max-width: 100%;
     border: 2px solid #3882f6;
     border-radius: 10px;
     align-self: center;
 }
 
 .white-section {
-    font-size: 36px;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #1f2937;
     text-align: center;
-    margin: 50px 0 0 0;
+    margin-top: 50px;
 }
 
 .blue-square-text {
-    font-size: 9px;
+    font-size: 0.75rem;
     color: #1f2937;
     max-width: 20ch;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 2%;
 }
-
-#white-section {
-    display: flex;
-    margin: 50px 150px 90px 150px;
-    gap: 50px;
+.second-white-section {
     display: flex;
     justify-content: center;
+    gap: 5%;
+}
+#white-section {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .blue-square-container {
@@ -134,18 +136,16 @@ button {
 
 #quote-section {
     background-color: #e5e7eb;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
 }
 .quote-section {
-    margin-left: 150px;
-    margin-right: 150px;
     display: flex;
     flex-direction: column;
 }
 .testimonial {
-    font-size: 36px;
+    font-size: 2em;
     color: #1f2937;
     max-width: 35ch;
     font-weight: lighter;
@@ -157,17 +157,15 @@ align-self: flex-end;
 }
 
 #white-blue-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .blue-box {
     background-color: #3882f6;
     display: flex;
     flex-direction: row;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 50px 100px 50px 100px;
+    padding: 5% 10%;
     border-radius: 10px;
 }
 
@@ -181,9 +179,70 @@ align-self: flex-end;
 }
 
 #footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 3%;
+    padding-bottom: 3%;
     color: #e5e7eb;
     text-align: center;
     font-weight: lighter;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+}
+/* 2xl */
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
+    .hero-main {
+        margin-bottom: 5%; /* Adjust margin */
+    }
+
+    .heading {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .subtext {
+        font-size: 1rem; /* Smaller font size */
+    }
 }
