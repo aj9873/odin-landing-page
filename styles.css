@@ -125,6 +125,7 @@ button {
     display: flex;
     justify-content: center;
     gap: 5%;
+    flex-wrap: wrap;
 }
 #white-section {
     display: flex;
@@ -196,8 +197,8 @@ align-self: flex-end;
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
     width: 100%;
     max-width: 1536px;
 /* 2xl */
@@ -246,7 +247,7 @@ align-self: flex-end;
 
 @media (max-width: 390px) {
     .container {
-        max-width: 100%;
-        
+        max-width: 100%; 
     }
+
 }
